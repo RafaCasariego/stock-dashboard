@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Dashboard</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Buscador de acciones -->
+  <div class="search-container">
+    <h1>Buscar una acción</h1>
+    <form id="stock-form">
+      <input type="text" id="symbol" placeholder="Ejemplo: AAPL" required>
+      <button type="submit">Buscar</button>
+    </form>
+  </div>
+
+  <!-- Grid de acciones relevantes -->
+  <div class="grid-container" id="grid-container">
+    <!-- Las tarjetas de acciones relevantes se generarán aquí -->
+  </div>
+
+  <!-- Detalles de la acción seleccionada (esto se mostrará cuando se haga clic en una tarjeta) -->
+  <div id="stock-details" class="stock-details">
+    <h3>Detalles de la acción</h3>
+    <div id="stock-info">
+      <p id="stock-name">Nombre: </p>
+      <p id="stock-price">Precio: </p>
+      <p id="stock-date">Última actualización: </p>
+      <canvas id="stock-chart"></canvas>
+    </div>
+
+    <!-- Formulario de alerta por email -->
+    <div id="email-alert">
+      <h4>Configurar alerta por email</h4>
+      <form id="email-form">
+        <input type="email" id="email" placeholder="Tu correo" required>
+        <button type="submit">Configurar Alerta</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
